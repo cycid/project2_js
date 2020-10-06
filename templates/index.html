@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+	
+
+
+<title>Main page</title></head>
+<body>
+	<div id="head"></div><div class="row"><div style="overflow: auto;" id="chanel-list" class="col-sm-3 col-xs-6"><ul id="chanels"></ul>
+		<form class="form-inline" action="" id="chanform" style="position:relative; bottom: 0; left: 10px">
+		<input type="text" name="name" id="newChannel" placeholder="Chanel name">
+		<button type="submit" class="btn btn-primary">Create</button></form></div>
+
+
+	<div id="chanel-contain" class="col-sm-8 col-xs-6" style="height: 600px; margin-right: 80px; display: block;
+     margin:auto;
+	 overflow: auto;">
+
+		</div><form class="form-inline" action="" id="message" style="position:relative; bottom: 0; margin-left: 340px;">
+		<input type="text" style="width: 50%" name="post" id="newMessage" placeholder="Enter text">
+		<input type="file" id="upload" name="insert image" accept="image/png, image/jpeg" onchange="encodeImage(this)" />
+		<button type="submit" class="btn btn-primary">Post</button></form></div>
+	</body>
+		
